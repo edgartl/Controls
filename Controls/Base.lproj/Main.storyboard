@@ -68,13 +68,33 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="nov-Ae-6ul">
+                                <rect key="frame" x="56" y="212" width="524" height="30"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="100" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZYz-YT-cIi">
+                                        <rect key="frame" x="0.0" y="0.0" width="9" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <slider opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="50" minValue="1" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="0ot-42-qoO">
+                                        <rect key="frame" x="22" y="0.0" width="504" height="31"/>
+                                        <connections>
+                                            <action selector="sliderChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="48W-vg-61z"/>
+                                        </connections>
+                                    </slider>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="jDW-9I-jKG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="E4Q-il-ZII"/>
                             <constraint firstItem="jDW-9I-jKG" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="ELr-2R-7hd"/>
                             <constraint firstItem="xfb-L1-HLa" firstAttribute="top" secondItem="jDW-9I-jKG" secondAttribute="bottom" constant="8" symbolic="YES" id="LG5-46-JSX"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="nov-Ae-6ul" secondAttribute="trailing" id="Zha-kV-xZM"/>
+                            <constraint firstItem="nov-Ae-6ul" firstAttribute="top" secondItem="xfb-L1-HLa" secondAttribute="bottom" constant="28" id="dat-G2-XSv"/>
                             <constraint firstItem="xfb-L1-HLa" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="eGU-Cx-56c"/>
+                            <constraint firstItem="nov-Ae-6ul" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="36" id="gb0-BX-iSN"/>
                             <constraint firstAttribute="trailingMargin" secondItem="xfb-L1-HLa" secondAttribute="trailing" id="zxb-h5-A3T"/>
                         </constraints>
                         <connections>
@@ -84,6 +104,7 @@
                     <connections>
                         <outlet property="nameField" destination="zaJ-xX-WH8" id="uHH-sK-MoT"/>
                         <outlet property="numberField" destination="ifv-9X-IlH" id="HCt-5u-Gn6"/>
+                        <outlet property="sliderLabel" destination="ZYz-YT-cIi" id="ZZF-qf-azG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
